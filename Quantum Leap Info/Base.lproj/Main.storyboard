@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - Quotes-->
+        <scene sceneID="J1b-05-f0l">
+            <objects>
+                <tableViewController id="nhC-UM-sxN" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2D8-cH-VZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteTableViewCell" rowHeight="69" id="DSF-Gt-lUL" customClass="QuoteTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DSF-Gt-lUL" id="2rF-du-5BB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rls-g5-dE7" userLabel="Speaker Name Label">
+                                            <rect key="frame" x="10" y="10" width="300" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-aO-bde" userLabel="Quote Label">
+                                            <rect key="frame" x="10" y="38" width="300" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rls-g5-dE7" firstAttribute="top" secondItem="2rF-du-5BB" secondAttribute="top" constant="10" id="2A3-dE-nwp"/>
+                                        <constraint firstAttribute="trailing" secondItem="JhW-aO-bde" secondAttribute="trailing" constant="10" id="CsS-kg-ULj"/>
+                                        <constraint firstItem="JhW-aO-bde" firstAttribute="leading" secondItem="2rF-du-5BB" secondAttribute="leading" constant="10" id="MLe-Sv-qAX"/>
+                                        <constraint firstAttribute="bottom" secondItem="JhW-aO-bde" secondAttribute="bottom" constant="10" id="Vqc-UQ-cXC"/>
+                                        <constraint firstAttribute="trailing" secondItem="rls-g5-dE7" secondAttribute="trailing" constant="10" id="Vsx-QH-6jR"/>
+                                        <constraint firstItem="rls-g5-dE7" firstAttribute="leading" secondItem="2rF-du-5BB" secondAttribute="leading" constant="10" id="Y2J-qo-HmP"/>
+                                        <constraint firstItem="JhW-aO-bde" firstAttribute="top" secondItem="rls-g5-dE7" secondAttribute="bottom" constant="8" id="wdh-eZ-T7X"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="quoteLabel" destination="JhW-aO-bde" id="cu6-hf-29C"/>
+                                    <outlet property="speakerLabel" destination="rls-g5-dE7" id="XIv-Wy-8Ry"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RHJ-MT-TIZ" id="1H0-rw-jV6"/>
+                            <outlet property="delegate" destination="nhC-UM-sxN" id="M8a-dC-4Qd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quotes" id="zEf-sD-Bpv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNQ-sh-1JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="RHJ-MT-TIZ" customClass="QuotesDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="515"/>
+        </scene>
+        <!--Navigation Controller - Quotes-->
+        <scene sceneID="2Me-Bw-tqN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="cpV-g9-QSz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quotes" image="QuotesTabIcon" id="ahv-cv-ysB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcC-zB-Eo1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nhC-UM-sxN" kind="relationship" relationship="rootViewController" id="4Tr-m3-Pbb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lET-AV-g4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="515"/>
+        </scene>
+        <!--Synopsis View Controller - Second-->
+        <scene sceneID="ot8-2e-RuS">
+            <objects>
+                <viewController title="Second" id="QUy-BD-bpt" customClass="SynopsisViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FgS-U6-xeU"/>
+                        <viewControllerLayoutGuide type="bottom" id="stI-4g-hlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-8W-tFH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantum Leap" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4u-Yi-ygd" userLabel="Title Label">
+                                        <rect key="frame" x="10" y="20" width="300" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuantumLeapImage" translatesAutoresizingMaskIntoConstraints="NO" id="eSO-T2-ZF2">
+                                        <rect key="frame" x="10" y="48" width="300" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="QY9-GJ-uhp" userLabel="Synopsis Label">
+                                        <rect key="frame" x="10" y="206" width="300" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eSO-T2-ZF2" firstAttribute="leading" secondItem="fTG-8W-tFH" secondAttribute="leading" constant="10" id="3Tx-g3-rMv"/>
+                                    <constraint firstItem="F4u-Yi-ygd" firstAttribute="top" secondItem="fTG-8W-tFH" secondAttribute="top" constant="20" id="671-09-s3T"/>
+                                    <constraint firstAttribute="trailing" secondItem="QY9-GJ-uhp" secondAttribute="trailing" constant="10" id="7GS-Ah-jkg"/>
+                                    <constraint firstAttribute="trailing" secondItem="eSO-T2-ZF2" secondAttribute="trailing" constant="10" id="BVc-0P-Zx4"/>
+                                    <constraint firstItem="eSO-T2-ZF2" firstAttribute="top" secondItem="F4u-Yi-ygd" secondAttribute="bottom" constant="8" id="FBh-yE-QhM"/>
+                                    <constraint firstItem="F4u-Yi-ygd" firstAttribute="leading" secondItem="fTG-8W-tFH" secondAttribute="leading" constant="10" id="FFD-GU-aYG"/>
+                                    <constraint firstAttribute="trailing" secondItem="F4u-Yi-ygd" secondAttribute="trailing" constant="10" id="HNK-nC-faP"/>
+                                    <constraint firstAttribute="bottom" secondItem="QY9-GJ-uhp" secondAttribute="bottom" constant="341" placeholder="YES" id="SgQ-Va-U0i"/>
+                                    <constraint firstItem="QY9-GJ-uhp" firstAttribute="top" secondItem="eSO-T2-ZF2" secondAttribute="bottom" constant="8" id="W6r-Ht-biU"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QY9-GJ-uhp" secondAttribute="bottom" constant="20" id="fZp-PE-vCK"/>
+                                    <constraint firstItem="QY9-GJ-uhp" firstAttribute="leading" secondItem="fTG-8W-tFH" secondAttribute="leading" constant="10" id="lgZ-Zd-mid"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fTG-8W-tFH" secondAttribute="trailing" id="3Pd-99-Ty5"/>
+                            <constraint firstItem="fTG-8W-tFH" firstAttribute="top" secondItem="FgS-U6-xeU" secondAttribute="bottom" constant="-20" id="SVe-ro-nIl"/>
+                            <constraint firstItem="stI-4g-hlJ" firstAttribute="top" secondItem="fTG-8W-tFH" secondAttribute="bottom" constant="-49" id="ixz-US-t54"/>
+                            <constraint firstItem="fTG-8W-tFH" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="qJY-60-p3B"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Synopsis" image="SynopsisTabIcon" id="Z7h-1E-pvt"/>
+                    <connections>
+                        <outlet property="scrollView" destination="fTG-8W-tFH" id="zAt-px-5hf"/>
+                        <outlet property="scrollViewBottomConstraint" destination="ixz-US-t54" id="63H-fK-cmF"/>
+                        <outlet property="scrollViewTopConstraint" destination="SVe-ro-nIl" id="TGp-uc-wdj"/>
+                        <outlet property="synopsisLabel" destination="QY9-GJ-uhp" id="ibW-6x-UKY"/>
+                        <outlet property="titleLabel" destination="F4u-Yi-ygd" id="GV6-mU-Lam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="-139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
+                        <segue destination="cpV-g9-QSz" kind="relationship" relationship="viewControllers" id="6Ja-I4-SoP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QuantumLeapImage" width="300" height="150"/>
+        <image name="QuotesTabIcon" width="25" height="25"/>
+        <image name="SynopsisTabIcon" width="27" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

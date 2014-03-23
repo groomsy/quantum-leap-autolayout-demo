@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A047484318DF269700422A47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047484218DF269700422A47 /* Foundation.framework */; };
+		A047484518DF269700422A47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047484418DF269700422A47 /* CoreGraphics.framework */; };
+		A047484718DF269700422A47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047484618DF269700422A47 /* UIKit.framework */; };
+		A047484D18DF269700422A47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A047484B18DF269700422A47 /* InfoPlist.strings */; };
+		A047484F18DF269700422A47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A047484E18DF269700422A47 /* main.m */; };
+		A047485318DF269700422A47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A047485218DF269700422A47 /* AppDelegate.m */; };
+		A047485618DF269700422A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A047485418DF269700422A47 /* Main.storyboard */; };
+		A047485C18DF269700422A47 /* SynopsisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A047485B18DF269700422A47 /* SynopsisViewController.m */; };
+		A047485E18DF269700422A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A047485D18DF269700422A47 /* Images.xcassets */; };
+		A047486518DF269700422A47 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047486418DF269700422A47 /* XCTest.framework */; };
+		A047486618DF269700422A47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047484218DF269700422A47 /* Foundation.framework */; };
+		A047486718DF269700422A47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A047484618DF269700422A47 /* UIKit.framework */; };
+		A047486F18DF269700422A47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A047486D18DF269700422A47 /* InfoPlist.strings */; };
+		A047487B18DF2DDE00422A47 /* Synopsis.txt in Resources */ = {isa = PBXBuildFile; fileRef = A047487A18DF2DDE00422A47 /* Synopsis.txt */; };
+		A047487C18DF2DDE00422A47 /* Synopsis.txt in Resources */ = {isa = PBXBuildFile; fileRef = A047487A18DF2DDE00422A47 /* Synopsis.txt */; };
+		A047487F18DF384000422A47 /* QuotesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A047487E18DF384000422A47 /* QuotesDataSource.m */; };
+		A047488018DF384000422A47 /* QuotesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A047487E18DF384000422A47 /* QuotesDataSource.m */; };
+		A047488318DF38B000422A47 /* QuoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A047488218DF38B000422A47 /* QuoteTableViewCell.m */; };
+		A047488418DF38B000422A47 /* QuoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A047488218DF38B000422A47 /* QuoteTableViewCell.m */; };
+		A047488618DF394700422A47 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A047488518DF394700422A47 /* Quotes.plist */; };
+		A047488718DF394700422A47 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A047488518DF394700422A47 /* Quotes.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A047486818DF269700422A47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A047483718DF269700422A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A047483E18DF269700422A47;
+			remoteInfo = "AutoLayout Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A047483F18DF269700422A47 /* Quantum Leap Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quantum Leap Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A047484218DF269700422A47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A047484418DF269700422A47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A047484618DF269700422A47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A047484A18DF269700422A47 /* Quantum Leap Info-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quantum Leap Info-Info.plist"; sourceTree = "<group>"; };
+		A047484C18DF269700422A47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A047484E18DF269700422A47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A047485018DF269700422A47 /* Quantum Leap Info-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quantum Leap Info-Prefix.pch"; sourceTree = "<group>"; };
+		A047485118DF269700422A47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A047485218DF269700422A47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A047485518DF269700422A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A047485A18DF269700422A47 /* SynopsisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynopsisViewController.h; sourceTree = "<group>"; };
+		A047485B18DF269700422A47 /* SynopsisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynopsisViewController.m; sourceTree = "<group>"; };
+		A047485D18DF269700422A47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A047486318DF269700422A47 /* Quantum Leap Info Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quantum Leap Info Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A047486418DF269700422A47 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A047486C18DF269700422A47 /* Quantum Leap InfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quantum Leap InfoTests-Info.plist"; sourceTree = "<group>"; };
+		A047486E18DF269700422A47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A047487A18DF2DDE00422A47 /* Synopsis.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Synopsis.txt; sourceTree = "<group>"; };
+		A047487D18DF384000422A47 /* QuotesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesDataSource.h; sourceTree = "<group>"; };
+		A047487E18DF384000422A47 /* QuotesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesDataSource.m; sourceTree = "<group>"; };
+		A047488118DF38B000422A47 /* QuoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteTableViewCell.h; sourceTree = "<group>"; };
+		A047488218DF38B000422A47 /* QuoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteTableViewCell.m; sourceTree = "<group>"; };
+		A047488518DF394700422A47 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A047483C18DF269700422A47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047484518DF269700422A47 /* CoreGraphics.framework in Frameworks */,
+				A047484718DF269700422A47 /* UIKit.framework in Frameworks */,
+				A047484318DF269700422A47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A047486018DF269700422A47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047486518DF269700422A47 /* XCTest.framework in Frameworks */,
+				A047486718DF269700422A47 /* UIKit.framework in Frameworks */,
+				A047486618DF269700422A47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A047483618DF269700422A47 = {
+			isa = PBXGroup;
+			children = (
+				A047484818DF269700422A47 /* Quantum Leap Info */,
+				A047486A18DF269700422A47 /* Quantum Leap Info Tests */,
+				A047484118DF269700422A47 /* Frameworks */,
+				A047484018DF269700422A47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A047484018DF269700422A47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A047483F18DF269700422A47 /* Quantum Leap Info.app */,
+				A047486318DF269700422A47 /* Quantum Leap Info Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A047484118DF269700422A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A047484218DF269700422A47 /* Foundation.framework */,
+				A047484418DF269700422A47 /* CoreGraphics.framework */,
+				A047484618DF269700422A47 /* UIKit.framework */,
+				A047486418DF269700422A47 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A047484818DF269700422A47 /* Quantum Leap Info */ = {
+			isa = PBXGroup;
+			children = (
+				A047485D18DF269700422A47 /* Images.xcassets */,
+				A047484918DF269700422A47 /* Supporting Files */,
+				A047485118DF269700422A47 /* AppDelegate.h */,
+				A047485218DF269700422A47 /* AppDelegate.m */,
+				A047485418DF269700422A47 /* Main.storyboard */,
+				A047487D18DF384000422A47 /* QuotesDataSource.h */,
+				A047487E18DF384000422A47 /* QuotesDataSource.m */,
+				A047488118DF38B000422A47 /* QuoteTableViewCell.h */,
+				A047488218DF38B000422A47 /* QuoteTableViewCell.m */,
+				A047485A18DF269700422A47 /* SynopsisViewController.h */,
+				A047485B18DF269700422A47 /* SynopsisViewController.m */,
+			);
+			path = "Quantum Leap Info";
+			sourceTree = "<group>";
+		};
+		A047484918DF269700422A47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A047484A18DF269700422A47 /* Quantum Leap Info-Info.plist */,
+				A047485018DF269700422A47 /* Quantum Leap Info-Prefix.pch */,
+				A047484B18DF269700422A47 /* InfoPlist.strings */,
+				A047484E18DF269700422A47 /* main.m */,
+				A047488518DF394700422A47 /* Quotes.plist */,
+				A047487A18DF2DDE00422A47 /* Synopsis.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A047486A18DF269700422A47 /* Quantum Leap Info Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A047486B18DF269700422A47 /* Supporting Files */,
+			);
+			path = "Quantum Leap Info Tests";
+			sourceTree = "<group>";
+		};
+		A047486B18DF269700422A47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A047486C18DF269700422A47 /* Quantum Leap InfoTests-Info.plist */,
+				A047486D18DF269700422A47 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A047483E18DF269700422A47 /* Quantum Leap Info */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A047487418DF269700422A47 /* Build configuration list for PBXNativeTarget "Quantum Leap Info" */;
+			buildPhases = (
+				A047483B18DF269700422A47 /* Sources */,
+				A047483C18DF269700422A47 /* Frameworks */,
+				A047483D18DF269700422A47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quantum Leap Info";
+			productName = "AutoLayout Demo";
+			productReference = A047483F18DF269700422A47 /* Quantum Leap Info.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A047486218DF269700422A47 /* Quantum Leap Info Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A047487718DF269700422A47 /* Build configuration list for PBXNativeTarget "Quantum Leap Info Tests" */;
+			buildPhases = (
+				A047485F18DF269700422A47 /* Sources */,
+				A047486018DF269700422A47 /* Frameworks */,
+				A047486118DF269700422A47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A047486918DF269700422A47 /* PBXTargetDependency */,
+			);
+			name = "Quantum Leap Info Tests";
+			productName = "AutoLayout DemoTests";
+			productReference = A047486318DF269700422A47 /* Quantum Leap Info Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A047483718DF269700422A47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Groomsy Dev";
+				TargetAttributes = {
+					A047486218DF269700422A47 = {
+						TestTargetID = A047483E18DF269700422A47;
+					};
+				};
+			};
+			buildConfigurationList = A047483A18DF269700422A47 /* Build configuration list for PBXProject "Quantum Leap Info" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A047483618DF269700422A47;
+			productRefGroup = A047484018DF269700422A47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A047483E18DF269700422A47 /* Quantum Leap Info */,
+				A047486218DF269700422A47 /* Quantum Leap Info Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A047483D18DF269700422A47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047485E18DF269700422A47 /* Images.xcassets in Resources */,
+				A047484D18DF269700422A47 /* InfoPlist.strings in Resources */,
+				A047487B18DF2DDE00422A47 /* Synopsis.txt in Resources */,
+				A047488618DF394700422A47 /* Quotes.plist in Resources */,
+				A047485618DF269700422A47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A047486118DF269700422A47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047487C18DF2DDE00422A47 /* Synopsis.txt in Resources */,
+				A047488718DF394700422A47 /* Quotes.plist in Resources */,
+				A047486F18DF269700422A47 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A047483B18DF269700422A47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047485C18DF269700422A47 /* SynopsisViewController.m in Sources */,
+				A047487F18DF384000422A47 /* QuotesDataSource.m in Sources */,
+				A047488318DF38B000422A47 /* QuoteTableViewCell.m in Sources */,
+				A047485318DF269700422A47 /* AppDelegate.m in Sources */,
+				A047484F18DF269700422A47 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A047485F18DF269700422A47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A047488418DF38B000422A47 /* QuoteTableViewCell.m in Sources */,
+				A047488018DF384000422A47 /* QuotesDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A047486918DF269700422A47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A047483E18DF269700422A47 /* Quantum Leap Info */;
+			targetProxy = A047486818DF269700422A47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A047484B18DF269700422A47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A047484C18DF269700422A47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A047485418DF269700422A47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A047485518DF269700422A47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A047486D18DF269700422A47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A047486E18DF269700422A47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A047487218DF269700422A47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A047487318DF269700422A47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A047487518DF269700422A47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quantum Leap Info/Quantum Leap Info-Prefix.pch";
+				INFOPLIST_FILE = "Quantum Leap Info/Quantum Leap Info-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A047487618DF269700422A47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quantum Leap Info/Quantum Leap Info-Prefix.pch";
+				INFOPLIST_FILE = "Quantum Leap Info/Quantum Leap Info-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A047487818DF269700422A47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quantum Leap Info.app/Quantum Leap Info";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quantum Leap Info/Quantum Leap Info-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Quantum Leap Info Tests/Quantum Leap InfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A047487918DF269700422A47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quantum Leap Info.app/Quantum Leap Info";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quantum Leap Info/Quantum Leap Info-Prefix.pch";
+				INFOPLIST_FILE = "Quantum Leap Info Tests/Quantum Leap InfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A047483A18DF269700422A47 /* Build configuration list for PBXProject "Quantum Leap Info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A047487218DF269700422A47 /* Debug */,
+				A047487318DF269700422A47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A047487418DF269700422A47 /* Build configuration list for PBXNativeTarget "Quantum Leap Info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A047487518DF269700422A47 /* Debug */,
+				A047487618DF269700422A47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A047487718DF269700422A47 /* Build configuration list for PBXNativeTarget "Quantum Leap Info Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A047487818DF269700422A47 /* Debug */,
+				A047487918DF269700422A47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A047483718DF269700422A47 /* Project object */;
+}
