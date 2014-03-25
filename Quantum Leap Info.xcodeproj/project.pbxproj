@@ -30,6 +30,8 @@
 		A047488718DF394700422A47 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A047488518DF394700422A47 /* Quotes.plist */; };
 		EC02154B18E1C37800965491 /* QuotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC02154A18E1C37800965491 /* QuotesTableViewController.m */; };
 		EC02154C18E1C37800965491 /* QuotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC02154A18E1C37800965491 /* QuotesTableViewController.m */; };
+		ECF894D618E21FFA00642AC1 /* CastNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF894D518E21FFA00642AC1 /* CastNotesViewController.m */; };
+		ECF894D718E21FFA00642AC1 /* CastNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF894D518E21FFA00642AC1 /* CastNotesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		A047488518DF394700422A47 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 		EC02154918E1C37800965491 /* QuotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesTableViewController.h; sourceTree = "<group>"; };
 		EC02154A18E1C37800965491 /* QuotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesTableViewController.m; sourceTree = "<group>"; };
+		ECF894D418E21FFA00642AC1 /* CastNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastNotesViewController.h; sourceTree = "<group>"; };
+		ECF894D518E21FFA00642AC1 /* CastNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastNotesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 				A047484918DF269700422A47 /* Supporting Files */,
 				A047485118DF269700422A47 /* AppDelegate.h */,
 				A047485218DF269700422A47 /* AppDelegate.m */,
+				ECF894D418E21FFA00642AC1 /* CastNotesViewController.h */,
+				ECF894D518E21FFA00642AC1 /* CastNotesViewController.m */,
 				A047485418DF269700422A47 /* Main.storyboard */,
 				A047487D18DF384000422A47 /* QuotesDataSource.h */,
 				A047487E18DF384000422A47 /* QuotesDataSource.m */,
@@ -283,6 +289,7 @@
 				A047487F18DF384000422A47 /* QuotesDataSource.m in Sources */,
 				A047488318DF38B000422A47 /* QuoteTableViewCell.m in Sources */,
 				A047485318DF269700422A47 /* AppDelegate.m in Sources */,
+				ECF894D618E21FFA00642AC1 /* CastNotesViewController.m in Sources */,
 				EC02154B18E1C37800965491 /* QuotesTableViewController.m in Sources */,
 				A047484F18DF269700422A47 /* main.m in Sources */,
 			);
@@ -295,6 +302,7 @@
 				A047488418DF38B000422A47 /* QuoteTableViewCell.m in Sources */,
 				EC02154C18E1C37800965491 /* QuotesTableViewController.m in Sources */,
 				A047488018DF384000422A47 /* QuotesDataSource.m in Sources */,
+				ECF894D718E21FFA00642AC1 /* CastNotesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
