@@ -61,6 +61,41 @@
             </objects>
             <point key="canvasLocation" x="980" y="515"/>
         </scene>
+        <!--Navigation Controller - Notes-->
+        <scene sceneID="SiP-wy-Vw4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="s7B-OC-RiI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" image="NotesTabIcon" id="NVQ-eu-oYO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q6m-15-H4G">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rcv-4f-vq0" kind="relationship" relationship="rootViewController" id="g29-Pc-CwV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DY6-1M-FUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="1181"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0hG-d4-ZnA">
+            <objects>
+                <viewController id="Rcv-4f-vq0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8s-g5-rl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPW-Cw-XtY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yo6-pu-jcs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mTg-XF-ekI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9o-pR-C0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="1181"/>
+        </scene>
         <!--Navigation Controller - Quotes-->
         <scene sceneID="2Me-Bw-tqN">
             <objects>
@@ -177,6 +212,7 @@
                     <connections>
                         <segue destination="6Bk-Pz-FkB" kind="relationship" relationship="viewControllers" id="tQ3-Ha-pfN"/>
                         <segue destination="cpV-g9-QSz" kind="relationship" relationship="viewControllers" id="6Ja-I4-SoP"/>
+                        <segue destination="s7B-OC-RiI" kind="relationship" relationship="viewControllers" id="YOl-E7-xzo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -185,6 +221,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NotesTabIcon" width="24" height="17"/>
         <image name="QuantumLeapImage" width="300" height="150"/>
         <image name="QuotesTabIcon" width="25" height="25"/>
         <image name="SynopsisTabIcon" width="27" height="24"/>
