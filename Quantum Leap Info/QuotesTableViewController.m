@@ -28,6 +28,28 @@
     return _prototypeCell;
 }
 
+#pragma mark - View Lifecycle Methods
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(preferredContentSizeChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+
+    [self preferredContentSizeChanged:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
+}
+
 #pragma mark - UITableViewDelegate Methods
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -42,6 +64,12 @@
 
     CGSize size = [[prototypeCell contentView] systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height + 1;
+}
+
+#pragma mark NSNotificationCenter Observer Methods
+- (void)preferredContentSizeChanged:(NSNotification *)notification
+{
+    [[self tableView] reloadData];
 }
 
 @end

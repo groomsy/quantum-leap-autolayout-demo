@@ -44,6 +44,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
+
+    [self preferredContentSizeChanged:nil];
 }
 
 #pragma mark - IBAction Methods

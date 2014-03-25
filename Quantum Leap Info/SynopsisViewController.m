@@ -50,6 +50,8 @@
                                              selector:@selector(preferredContentSizeChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
+
+    [self preferredContentSizeChanged:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
