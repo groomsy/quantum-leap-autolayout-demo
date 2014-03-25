@@ -25,13 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    
-    CGFloat topConstraint = -[[self scrollViewTopConstraint] constant];
-    CGFloat bottomConstraint = -[[self scrollViewBottomConstraint] constant];
-    [[self scrollView] setContentInset:UIEdgeInsetsMake(topConstraint, 0, bottomConstraint, 0)];
-    
+
     NSString *synopsisPath = [[NSBundle mainBundle] pathForResource:@"Synopsis" ofType:@"txt"];
     
     NSError *error = nil;
@@ -51,7 +45,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(preferredContentSizeChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification

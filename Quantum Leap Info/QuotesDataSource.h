@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class QuoteTableViewCell;
+
 @interface QuotesDataSource : NSObject <UITableViewDataSource>
+
+- (void)configureCell:(QuoteTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

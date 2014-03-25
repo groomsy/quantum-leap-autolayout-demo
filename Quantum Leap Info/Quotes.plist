@@ -14,5 +14,35 @@
 		<key>Quote</key>
 		<string>I can&apos;t have a life. All I do is live someone else&apos;s life. I right their wrongs, I fight their fights - geez, I feel like I&apos;m Don Quixote.</string>
 	</dict>
+	<dict>
+		<key>Speaker</key>
+		<string>Al</string>
+		<key>Quote</key>
+		<string>Don&apos;t do anything I wouldn&apos;t do. And if you do, take pictures.</string>
+	</dict>
+	<dict>
+		<key>Speaker</key>
+		<string>Sam</string>
+		<key>Quote</key>
+		<string>It all started when a time travel experiment I was conducting went... a little ka-ka. In the blink of a cosmic clock I went from quantum physicist to air force test pilot. Which could have been fun... if I knew how to fly. Fortunately, I had help. An observer from the project named Al. Unfortunately, Al&apos;s a hologram, so all he can lend is moral support. Anyway, here I am. Bouncing around in time, putting things right which once went wrong. A sort of time traveling Lone Ranger, with Al as my Tonto. And I don&apos;t even need a mask. Oh boy.</string>
+	</dict>
+	<dict>
+		<key>Speaker</key>
+		<string>Sam</string>
+		<key>Quote</key>
+		<string>Oh, boy…</string>
+	</dict>
+	<dict>
+		<key>Speaker</key>
+		<string>Al</string>
+		<key>Quote</key>
+		<string>Women - you can&apos;t trust &apos;em. They don&apos;t understand the double standard.</string>
+	</dict>
+	<dict>
+		<key>Speaker</key>
+		<string>Al</string>
+		<key>Quote</key>
+		<string>Well, we been having some difficulty. Ziggy, he&apos;s, uh, going through mood swings. I think we need get a girl computer put it right next to him, one with a nice set of *hard* disks.</string>
+	</dict>
 </array>
 </plist>

@@ -17,12 +17,4 @@
 
 @implementation QuoteTableViewCell
 
-- (void)prepareForReuse
-{
-    [super prepareForReuse];
-    
-    [[self speakerLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
-    [[self quoteLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
-}
-
 @end

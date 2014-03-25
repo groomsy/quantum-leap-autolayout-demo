@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Quotes-->
+        <!--Quotes Table View Controller - Quotes-->
         <scene sceneID="J1b-05-f0l">
             <objects>
-                <tableViewController id="nhC-UM-sxN" sceneMemberID="viewController">
+                <tableViewController id="nhC-UM-sxN" customClass="QuotesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2D8-cH-VZZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-aO-bde" userLabel="Quote Label">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-aO-bde" userLabel="Quote Label">
                                             <rect key="frame" x="10" y="38" width="300" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="573" y="515"/>
         </scene>
-        <!--Synopsis View Controller - Second-->
+        <!--Synopsis View Controller - Synopsis-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
-                <viewController title="Second" id="QUy-BD-bpt" customClass="SynopsisViewController" sceneMemberID="viewController">
+                <viewController id="QUy-BD-bpt" customClass="SynopsisViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FgS-U6-xeU"/>
                         <viewControllerLayoutGuide type="bottom" id="stI-4g-hlJ"/>
@@ -129,12 +129,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fTG-8W-tFH" secondAttribute="trailing" id="3Pd-99-Ty5"/>
-                            <constraint firstItem="fTG-8W-tFH" firstAttribute="top" secondItem="FgS-U6-xeU" secondAttribute="bottom" constant="-20" id="SVe-ro-nIl"/>
+                            <constraint firstItem="fTG-8W-tFH" firstAttribute="top" secondItem="FgS-U6-xeU" secondAttribute="bottom" constant="-64" id="SVe-ro-nIl"/>
                             <constraint firstItem="stI-4g-hlJ" firstAttribute="top" secondItem="fTG-8W-tFH" secondAttribute="bottom" constant="-49" id="ixz-US-t54"/>
                             <constraint firstItem="fTG-8W-tFH" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="qJY-60-p3B"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Synopsis" image="SynopsisTabIcon" id="Z7h-1E-pvt"/>
+                    <navigationItem key="navigationItem" title="Synopsis" id="rFt-ZF-qKR"/>
                     <connections>
                         <outlet property="scrollView" destination="fTG-8W-tFH" id="zAt-px-5hf"/>
                         <outlet property="scrollViewBottomConstraint" destination="ixz-US-t54" id="63H-fK-cmF"/>
@@ -145,7 +146,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="-139"/>
+            <point key="canvasLocation" x="980" y="-152"/>
+        </scene>
+        <!--Navigation Controller - Synopsis-->
+        <scene sceneID="dAs-Ce-CGa">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6Bk-Pz-FkB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Synopsis" image="SynopsisTabIcon" id="vdo-5B-C32"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UxZ-HK-lsq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="rootViewController" id="jt7-dx-Wk7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nf-59-jUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="-152"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -158,7 +175,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
+                        <segue destination="6Bk-Pz-FkB" kind="relationship" relationship="viewControllers" id="tQ3-Ha-pfN"/>
                         <segue destination="cpV-g9-QSz" kind="relationship" relationship="viewControllers" id="6Ja-I4-SoP"/>
                     </connections>
                 </tabBarController>

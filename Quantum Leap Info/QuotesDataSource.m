@@ -36,6 +36,20 @@
     return _quotes;
 }
 
+- (void)configureCell:(QuoteTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *quoteDictionary = [[self quotes] objectAtIndex:[indexPath row]];
+
+    NSString *speaker = quoteDictionary[@"Speaker"];
+    [[cell speakerLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
+    [[cell speakerLabel] setText:speaker];
+
+    NSString *quote = quoteDictionary[@"Quote"];
+    [[cell quoteLabel] setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+    [[cell quoteLabel] setText:quote];
+}
+
+#pragma mark - UITableViewDataSource Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -46,18 +60,12 @@
     return [[self quotes] count];
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *quoteDictionary = [[self quotes] objectAtIndex:[indexPath row]];
-    
     QuoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QuoteTableViewCell class])];
-    
-    NSString *speaker = quoteDictionary[@"Speaker"];
-    [[cell speakerLabel] setText:speaker];
-    
-    NSString *quote = quoteDictionary[@"Quote"];
-    [[cell quoteLabel] setText:quote];
-    
+    [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
 }
 
