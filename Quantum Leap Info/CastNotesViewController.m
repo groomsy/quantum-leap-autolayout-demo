@@ -10,6 +10,10 @@
 
 @interface CastNotesViewController ()
 
+@property (assign, nonatomic) CGFloat originalScrollViewBottomEdge;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
@@ -35,6 +39,18 @@
                                              selector:@selector(preferredContentSizeChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    [self preferredContentSizeChanged:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -45,7 +61,13 @@
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
 
-    [self preferredContentSizeChanged:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
 }
 
 #pragma mark - IBAction Methods
@@ -64,6 +86,47 @@
     [_beckettLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     [_calavicciLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     [_ziggyLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGSize keyboardSize = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    [self setOriginalScrollViewBottomEdge:[_scrollView contentInset].bottom];
+    
+    CGFloat bottomEdge = keyboardSize.height;
+    double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSInteger curve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    
+    [self adjustScrollViewContentInsetWithBottomEdge:bottomEdge withAnimationDuration:duration andCurve:curve];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    
+    CGFloat bottomEdge = [self originalScrollViewBottomEdge];
+    double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSInteger curve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    
+    [self adjustScrollViewContentInsetWithBottomEdge:bottomEdge withAnimationDuration:duration andCurve:curve];
+}
+
+- (void)adjustScrollViewContentInsetWithBottomEdge:(CGFloat)bottomEdge withAnimationDuration:(double)duration andCurve:(NSInteger)curve
+{
+    __weak typeof(self) weakself = self;
+    [UIView animateWithDuration:duration
+                          delay:0.f
+                        options:curve
+                     animations:^{
+                         
+                         UIScrollView *scrollView = [weakself scrollView];
+                         UIEdgeInsets inset = UIEdgeInsetsMake([scrollView contentInset].top, 0, bottomEdge, 0);
+                         [scrollView setContentInset:inset];
+                         [scrollView setScrollIndicatorInsets:inset];
+                         [[weakself view] layoutIfNeeded];
+                     } completion:nil];
 }
 
 @end
