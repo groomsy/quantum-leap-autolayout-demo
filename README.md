@@ -3,6 +3,8 @@ Quantum Leap Info: Auto Layout Demo
 
 A small iOS application to demo Auto Layout that happens to reference a great television show (Quantum Leap).
 
+This application was built to demo my Advanced Layouts with Auto Layout talk at the [Nashville Cocoaheads](https://twitter.com/nashcocoaheads) meetup. You can find the slides for that talk [here](http://groomsydev.org/advanced-layouts-with-auto-layout/index.html). The slides were exported using Keynote into an HTML presentation. To advance slides, click your mouse or use the arrow keys.
+
 ## Application Content
 Each tab in this application represents a unique challenge that I have encountered while doing iOS development and utilizing Auto Layout.
 
